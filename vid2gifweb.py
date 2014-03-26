@@ -20,14 +20,16 @@ def hello():
 @app.route("/upload", methods=['POST'])
 def upload_video():
 	file = request.files['video']
+	print file
 	if file and allowed_file(file.filename):
 		filename = secure_filename(file.filename)
 		name_with_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 		file.save(name_with_path)
+		
+		VideoFileClip(name_with_path).subclip((0,1.0),(0,2.0)).resize(0.3).to_gif("converted/"+filename.rsplit('.', 1)[0]+".gif")
 
-		print 'starting conversion'
-		VideoFileClip(name_with_path).subclip((0,1.0),(0,2.0)).resize(0.3).to_gif("test.gif")
-		print 'finished conversion'
+		os.remove(name_with_path)
+
 	return ""
 
 if __name__ == "__main__":
