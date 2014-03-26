@@ -15,8 +15,8 @@ Requirements
  - [ffmpeg](http://www.ffmpeg.org/)
     - On Ubuntu
         1. `sudo add-apt-repository ppa:jon-severinsson/ffmpeg`
-        2. `sudo apt-get install ffmpeg`
-        3. `pip install PIL --allow-external PIL --allow-unverified PIL`
+        2. `pip install PIL --allow-external PIL --allow-unverified PIL`
+        3. `sudo apt-get install ffmpeg`
 
 Ubuntu Instructions
 -------------------
