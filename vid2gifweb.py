@@ -22,8 +22,12 @@ def upload_video():
 	file = request.files['video']
 	if file and allowed_file(file.filename):
 		filename = secure_filename(file.filename)
-		file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-		print file
+		name_with_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+		file.save(name_with_path)
+
+		print 'starting conversion'
+		VideoFileClip(name_with_path).subclip((0,1.0),(0,2.0)).resize(0.3).to_gif("test.gif")
+		print 'finished conversion'
 	return ""
 
 if __name__ == "__main__":
