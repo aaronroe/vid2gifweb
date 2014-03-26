@@ -26,7 +26,7 @@ def upload_video():
 		name_with_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 		file.save(name_with_path)
 		
-		VideoFileClip(name_with_path).subclip((0,1.0),(0,2.0)).resize(0.3).to_gif("converted/"+filename.rsplit('.', 1)[0]+".gif")
+		VideoFileClip(name_with_path).subclip((0,0.0),(0,4.0)).resize(0.3).to_gif("converted/"+filename.rsplit('.', 1)[0]+".gif")
 
 		os.remove(name_with_path)
 
