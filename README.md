@@ -14,8 +14,8 @@ Requirements
     - On Ubuntu: `sudo pip install virtualenv`
  - [ffmpeg](http://www.ffmpeg.org/)
     - On Ubuntu
-        1. `sudo add-apt-repository ppa:jon-severinsson/ffmpeg`
-        2. `pip install PIL --allow-external PIL --allow-unverified PIL`
+        1. `pip install PIL --allow-external PIL --allow-unverified PIL`
+        2. `sudo add-apt-repository ppa:jon-severinsson/ffmpeg`
         3. `sudo apt-get install ffmpeg`
 
 Ubuntu Instructions
