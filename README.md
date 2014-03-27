@@ -20,7 +20,17 @@ Requirements
 
 Ubuntu Instructions
 -------------------
+For first time:
   1. `cd [vid2gifweb_directory]`
-  2. `sudo pip install Flask`
-  3. `sudo pip install moviepy`
+  2. Activate virtual environment
+    1. `virtualenv venv`
+    2. `source venv/bin/activate`
+  2. `pip install Flask`
+  3. `pip install moviepy`
+  3. `pip install Flask-PyMongo`
   4. `python vid2gifweb.py` and enjoy!
+
+All other times:
+  1. `cd [vid2gifweb_directory]`
+  2. `source venv/bin/activate`
+  3. `python vid2gifweb.py`
